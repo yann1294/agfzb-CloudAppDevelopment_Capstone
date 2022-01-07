@@ -7,10 +7,9 @@ env:
   IBM_CLOUD_REGION: eu-gb
   IBM_CLOUD_GROUP: default
   IBM_CLOUD_SPACE: djangoserver-space
-  IBM_CLOUD_ORG:  dev.yann12@gmail.com
+  IBM_CLOUD_ORG:  cloudgen
   MANIFEST_NAME: manifest.yml
-  IBM_CLOUD_API: f4VwcTxatl-mXPvDPGgoZG7BGXoM1lXwkA3npulMxdhN
-
+  IBM_CLOUD_API: ${{secrets.IBM_CLOUD_API_KEY}}
 defaults:
   run:
     working-directory: server
