@@ -31,7 +31,7 @@ class CarModel(models.Model):
             ("SEDAN", "Sedan"), ("SUV", "SUV"), ("WAGON", "Wagon"), ("LIMOUSINE", "Limousine"), ("BATMOBILE", "Batmobile")
         )
 
-    make = models.ForeignKey(CarMake, on_delete=models.CASCADE)
+    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)
     name = models.CharField(null=False, max_length=30)
     c_type = models.CharField(max_length=30, choices=TYPES)
     dealer_id = models.IntegerField()
@@ -39,7 +39,7 @@ class CarModel(models.Model):
 
     def __str__(self):
         return "Name: " + self.name + \
-                " Make Name: "+ self.make.name + \
+                " Make Name: "+ self.car_make.name + \
                 " Type: " + self.c_type + \
                 " Dealer ID: " + str(self.dealer_id)+ \
                 " Year: " + str(self.year)
